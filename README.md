@@ -15,4 +15,9 @@ The 'scripts.py' file includes solutions for the following Hackerrank challenges
 ###Problem 1 
 
 * **Introduction**(All 7 challenges)
-* **Data Types**
+* **Data Types**( 3 challenges)
+  -List Comprehensions
+  -Find the Runner-Up Score
+  -Finding the percentage
+* **Strings**()
+  -Text Wrap
