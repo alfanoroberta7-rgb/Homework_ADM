@@ -66,6 +66,8 @@ if __name__ == '__main__':
 
 
 #DATA TYPES
+
+#List Comprehensions
 x = int(input())
 y = int(input())
 z = int(input())
@@ -75,7 +77,14 @@ lista=[[i,j,k]
       for j in range(y+1)
       for k in range(z+1)
       if i+j+k!=n]
-print(lista)
+print(lista) 
+#Find the Runner-Up Score!
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split()) 
+    print(sorted(set(arr))[-2]) 
+#
+    
 
 
 #SETS
