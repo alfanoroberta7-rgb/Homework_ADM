@@ -111,6 +111,21 @@ if __name__ == '__main__':
     string, max_width = input(), int(input())
     result = wrap(string, max_width)
     print(result) 
+#String Split and Join
+def split_and_join(line):
+    return "-".join(line.split())
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+#Mutations
+def mutate_string(string, position, character):
+    return string[:position] + character+ string[position+1:]
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
 
     
 
