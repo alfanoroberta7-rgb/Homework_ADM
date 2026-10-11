@@ -83,7 +83,24 @@ if __name__ == '__main__':
     n = int(input())
     arr = map(int, input().split()) 
     print(sorted(set(arr))[-2]) 
-#
+#Tuples
+if __name__ == '__main__':
+    n = int(input())
+    integer_list = map(int, input().split()) 
+    t=tuple(integer_list)
+    print(hash(t)) 
+#Finding the percentage 
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input() 
+    marks=student_marks[query_name]
+    average=sum(marks)/len(marks)
+    print(f"{average:.2f}") 
     
 
 
