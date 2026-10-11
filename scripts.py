@@ -101,6 +101,17 @@ if __name__ == '__main__':
     marks=student_marks[query_name]
     average=sum(marks)/len(marks)
     print(f"{average:.2f}") 
+
+#STRINGS 
+#Text Wrap
+import textwrap
+def wrap(string, max_width):
+    return textwrap.fill(string,width=max_width)
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result) 
+
     
 
 
