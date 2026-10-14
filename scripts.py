@@ -244,6 +244,11 @@ def arrays(arr):
 arr = input().strip().split(' ')
 result = arrays(arr)
 print(result)
+#Polinomials
+import numpy
+coefficients = list(map(float, input().split()))
+x = float(input())
+print(numpy.polyval(coefficients, x))
 
 #PROBLEM 2 
 
