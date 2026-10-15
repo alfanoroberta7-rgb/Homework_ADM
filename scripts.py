@@ -140,41 +140,67 @@ if __name__ == '__main__':
 
 
 #SETS
+#Introduction to sets
 def average(array):
     numbers=set(array)
     mean=sum(numbers)/len(numbers)
     return f"{mean:.3f}"
-    
-
 if __name__ == '__main__':
     n = int(input())
     arr = list(map(int, input().split()))
     result = average(arr)
     print(result)
+#Set.intersection() Operation
+n=int(input())
+english=set(map(int,input().split()))
+b=int(input())
+french=set(map(int,input().split()))
+res=english.intersection(french)
+print (len(res)) 
+
+#Set.difference() 
+n=int(input())
+english=set(map(int,input().split()))
+b=int(input())
+french=set(map(int,input().split()))
+res=english.difference(french)
+print (len(res))
+
+#Set.symmetric_difference() 
+n=int(input())
+english=set(map(int,input().split()))
+b=int(input())
+french=set(map(int,input().split()))
+res=english.symmetric_difference(french)
+print (len(res)) 
+
+#Set.union() operation
+n=int(input())
+english=set(map(int,input().split()))
+b=int(input())
+french=set(map(int,input().split()))
+res=english.union(french)
+print (len(res)) 
+
 
 #COLLECTIONS
 from collections import Counter
 
 if __name__ == "__main__":
-   
     num_shoes = int(input())
-
     shoe_sizes = list(map(int, input().split()))
     inventory = Counter(shoe_sizes)
-
-    
     num_customers = int(input())
-
     total_earned = 0
-
-   
     for _ in range(num_customers):
         size, price = map(int, input().split())
-
-        
         if inventory[size] > 0:
             total_earned += price  
             inventory[size] -= 1
+#collections.namedtuple() 
+from collections import namedtuple
+N, student = int(input()), namedtuple('student', input().split())
+print(f"{sum([int(student(*input().split()).MARKS) for x in range(N)])/N:.2f}")
 
 #DATA AND TIME
 import calendar
