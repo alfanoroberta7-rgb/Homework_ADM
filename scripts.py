@@ -220,6 +220,14 @@ for _ in range(t):
         
     except ValueError as e:
         print("Error Code:", e) 
+#BUILT-INS
+#Zipped!
+n, x = map(int, input().split())
+marks = []
+for _ in range(x):
+    marks.append(map(float, input().split()))
+for student in zip(*marks):
+    print(sum(student) / len(student))
 
 #FUNCTIONALS
 cube = lambda x: x**3
@@ -233,13 +241,6 @@ def fibonacci(n):
         for i in range(2,n):
             numbers.append(numbers[i-1]+numbers[i-2])
     return numbers
-    
-    
-    
-
-if __name__ == '__main__':
-    n = int(input())
-    print(list(map(cube, fibonacci(n))))
 
 
 #XML
@@ -251,25 +252,18 @@ def get_attr_number(node):
     current_attr=len(node.attrib)
     child_attr=sum(get_attr_number(child)for child in node)
     return current_attr+child_attr
-    
-
-if __name__ == '__main__':
-    sys.stdin.readline()
-    xml = sys.stdin.read()
-    tree = etree.ElementTree(etree.fromstring(xml))
-    root = tree.getroot()
-    print(get_attr_number(root))
 
 
 #NUMPY
 import numpy
-
+#Arrays
 def arrays(arr):
     return numpy.array(arr, float)[::-1]
     
 arr = input().strip().split(' ')
 result = arrays(arr)
 print(result)
+
 #Polinomials
 import numpy
 coefficients = list(map(float, input().split()))
@@ -286,16 +280,27 @@ def birthdayCakeCandles(candles):
         if i==maximum_size:
             count+=1
     return count
+
+#ViralAdvertising
+def viralAdvertising(n):
+    rec=5
+    cum_likes=0
+    for _ in range(1,n+1):
+        cum_likes+=rec//2
+        rec=((rec//2)*3)
+    return cum_likes
+
+#InsertionSort1
+def insertionSort1(n, arr):
+    for i in range(n - 1, 0, -1):
+        val = arr[i]
+        j = i - 1
+        while j >= 0 and val < arr[j]:
+            arr[j+1] = arr[j]
+            print(*arr)
+            j -= 1
+        arr[j + 1] = val
+    print(*arr)
     
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    
 
-    candles_count = int(input().strip())
-
-    candles = list(map(int, input().rstrip().split()))
-
-    result = birthdayCakeCandles(candles)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
