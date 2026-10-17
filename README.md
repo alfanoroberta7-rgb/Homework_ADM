@@ -19,5 +19,34 @@ The 'scripts.py' file includes solutions for the following Hackerrank challenges
   -List Comprehensions
   -Find the Runner-Up Score
   -Finding the percentage
-* **Strings**()
+* **Strings**(4challenges)
   -Text Wrap
+  -String Split and Join
+  -Mutations
+  -What's your name
+* **Sets**(5 challenges)
+  -Introduction to sets
+  -Set.intersaction() operation
+  -Set.difference()
+  -Set.symmetric_difference()
+  -Set.union()
+* **Collections**(2 challenges)
+  -Counter
+  -Collections.namedtuple()
+* **Data and Time**( 1 challenge)
+  -Calendar Module
+* **Exceptions**(the only 1)
+*  **Built-ins**()
+  -Zipped
+* **Functionals**(the only 1)
+* **XML**(1 challenge)
+  -Find the score
+* **Numpy**(two challenges)
+  -Arrays
+  -Polynomials
+
+  ### Problem 2
+  -Birthday cake candles
+  -Viral Advertising
+  -Insertion Sort 1
+  
